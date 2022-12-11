@@ -15,16 +15,16 @@
 // });
 
 
-(async () => {
-    try {
-        await sequelize.authenticate();
-        console.log("Database Connected!");
-    } catch (error) {
-        console.log("Couldn't Connect to server!");
-        return "Server Error";
-    }
-})();
+// (async () => {
+//     try {
+//         await sequelize.authenticate();
+//         console.log("Database Connected!");
+//     } catch (error) {
+//         console.log("Couldn't Connect to server!");
+//         return "Server Error";
+//     }
+// })();
 
 
 
-module.exports = sequelize;
+// module.exports = sequelize;
