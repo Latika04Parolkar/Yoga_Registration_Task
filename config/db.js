@@ -4,7 +4,7 @@ env.config();
 
 const sequelize = new Sequelize("yoga", "root", "", {
     dialect: "mysql",
-    host: "localhost",
+    host: process.env.HOST,
 }, {
     pool: {
         max: process.env.POOL_MAX,
