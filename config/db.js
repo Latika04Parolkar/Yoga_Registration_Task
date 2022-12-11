@@ -1,18 +1,18 @@
-const Sequelize = require('sequelize');
-const env = require('dotenv');
-env.config();
+// const Sequelize = require('sequelize');
+// const env = require('dotenv');
+// env.config();
 
-const sequelize = new Sequelize("yoga", "root", "", {
-    dialect: "mysql",
-    host: process.env.HOST,
-}, {
-    pool: {
-        max: process.env.POOL_MAX,
-        min: process.env.POOL_MIN,
-        acquire: process.env.POOL_ACQUIRE,
-        idle: process.env.POOL_IDLE
-    }
-});
+// const sequelize = new Sequelize("yoga", "root", "", {
+//     dialect: "mysql",
+//     host: process.env.HOST,
+// }, {
+//     pool: {
+//         max: process.env.POOL_MAX,
+//         min: process.env.POOL_MIN,
+//         acquire: process.env.POOL_ACQUIRE,
+//         idle: process.env.POOL_IDLE
+//     }
+// });
 
 
 (async () => {
