@@ -30,8 +30,7 @@ const CustomerDetails = sequelize.define("customerDetails", {
         type : Sequelize.DATEONLY,
     },
     batch : {
-        type : Sequelize.ENUM,
-        values : ["Morning 1", "Morning 2", "Morning 3", "Evening 1"]
+        type : Sequelize.STRING,
     }
 })
 
