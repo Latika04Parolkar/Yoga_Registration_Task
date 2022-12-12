@@ -63,7 +63,7 @@ This table is designed to store the basic details of the user. It consists of th
 * default timestamps
 
 ### (2) Payment
-It stores the details of the amount paid, month in which the amount was paid, customerDetailId ( foriegn key ) , id (primary key) and the default timestamps.
+It stores the details of the amount paid, month in which the amount was paid, customerDetailId ( foreign key ) , id (primary key) and the default timestamps.
 
 ## ER Diagram
 Understanding Database Design in a graphical manner. The following ER-Diagram explains the relations between the tables and attributes.
