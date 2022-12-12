@@ -30,7 +30,7 @@ router.post("/addCustomer", async (req, res) => {
                         code: 200,
                         status: "Success",
                         message: "User Entry Done!",
-                        id: customer.id,
+                        id: check.id,
                         monthStatus: "First Time"
                     });
                 } else {
