@@ -68,7 +68,7 @@ router.post("/addInfo", async (req, res) => {
             } else {
                 email = null;
             }
-            if (monthStatus === "FirstTime") {
+            if (monthStatus === "First Time") {
                 const currentYear = new Date().getFullYear();
                 const birthYear = DOB.split('-')[2];
                 const checkAge = currentYear - birthYear;
