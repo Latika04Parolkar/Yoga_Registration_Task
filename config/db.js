@@ -2,13 +2,7 @@ const Sequelize = require('sequelize');
 const env = require('dotenv');
 env.config();
 
-const sequelize = new Sequelize(process.env.DB_URI, {
-    pool: {
-        max: process.env.POOL_MAX,
-        min: process.env.POOL_MIN,
-        idle: process.env.POOL_IDLE
-      }
-});
+const sequelize = new Sequelize(process.env.DB_URI);
 
 async () => {
     try {
