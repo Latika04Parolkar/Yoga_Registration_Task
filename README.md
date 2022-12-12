@@ -1,6 +1,9 @@
 # Shiv Yoga Studio
 Built with the MySQL, Express, React and NodeJS.
 
+### Client Code can be viewed <a href="https://github.com/Latika04Parolkar/Yoga_Registration_Client" target="_blank">here</a>.
+### Deployed Project can be accessed from <a href="https://yoga-registration-client.vercel.app/" target="_blank">here</a>.
+
 ## Introduction
 This is a small project build for the registration process of the customers who are interested in joining the YOGA CLASSES.
 The users can simply register by submitting their basic details such as :-
@@ -63,7 +66,7 @@ This table is designed to store the basic details of the user. It consists of th
 * default timestamps
 
 ### (2) Payment
-It stores the details of the amount paid, month in which the amount was paid, customerDetailId ( foriegn key ) , id (primary key) and the default timestamps.
+It stores the details of the amount paid, month in which the amount was paid, customerDetailId ( foreign key ) , id (primary key) and the default timestamps.
 
 ## ER Diagram
 Understanding Database Design in a graphical manner. The following ER-Diagram explains the relations between the tables and attributes.
