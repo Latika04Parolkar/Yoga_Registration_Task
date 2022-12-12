@@ -25,7 +25,8 @@ router.post("/addCustomer", async (req, res) => {
                     monthStatus: "First Time"
                 });
             } else {
-                if (check.fullName === "") {
+                if (check.fullName === null) {
+                    console.log("fthdr");
                     res.status(200).send({
                         code: 200,
                         status: "Success",
