@@ -19,14 +19,15 @@ They can also select the suitable batch from the available four batches, namely 
 
 The payment of ₹500 -/ per month has to be done and customers can select their batch every month.
 
-## Key Features
- * 📝 when user enters Checks whether the mobile number exists or not
- * 📒 Stores the information in DB for the entry
- * 🚫 Batch cannot be changed in the same month
- * 
+## Work-Flow
+ * When user enters mobile number the server checks whether the mobile number exists or not
+ * If the user doesn’t exists, then the information is stored in the database
+ * If the user exists, it checks whether the month in which the last payment was done and the current month is same or different
+ * If monthStatus is the same then selected batch and "Payment Already Done!" message is displayed
+ * If the month is different then the user can make payment for the current month and could also change batch for the upcoming sessions
 
 ## Technologies Used
-This project was created using the following technologies.
+This project was created using the following technologies :-
 
 ### Server
 * Express
@@ -45,7 +46,7 @@ npm install
 
 ### Start Command
 `
-node index.js
+npm run start
 `
 
 ## Databse Design
@@ -53,16 +54,16 @@ This project consists of two Tables :-
 
 ### (1) Customers
 This table is designed to store the basic details of the user. It consists of the following attributes :-
-Id ( primary key )
-fullName,
-monbileNo,
-DOB,
-email,
-batch and
-default timestamps
+* Id ( primary key )
+* fullName,
+* monbileNo,
+* DOB,
+* email,
+* batch and
+* default timestamps
 
 ### (2) Payment
-It stores the details of the amount paid, month in which the amount was paid, customerDetailId ( foriegn key ) , id (primary key) and the default timestapms.
+It stores the details of the amount paid, month in which the amount was paid, customerDetailId ( foriegn key ) , id (primary key) and the default timestamps.
 
 ## ER Diagram
 Understanding Database Design in a graphical manner. The following ER-Diagram explains the relations between the tables and attributes.
