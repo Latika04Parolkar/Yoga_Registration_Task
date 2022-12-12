@@ -1,6 +1,9 @@
 # Shiv Yoga Studio
 Built with the MySQL, Express, React and NodeJS.
 
+### Client Code can be viewed <a href="https://github.com/Latika04Parolkar/Yoga_Registration_Client" target="_blank">here</a>.
+### Deployed Project can be accessed from <a href="https://yoga-registration-client.vercel.app/" target="_blank">here</a>.
+
 ## Introduction
 This is a small project build for the registration process of the customers who are interested in joining the YOGA CLASSES.
 The users can simply register by submitting their basic details such as :-
