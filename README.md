@@ -1,8 +1,8 @@
 # Shiv Yoga Studio
-Built with the MERN stack (MySQL, Express, React and NodeJS).
+Built with the MySQL, Express, React and NodeJS.
 
 ## Introduction
-Basically this is a small project build for the registration process of the customers who are interested in joining the YOGA CLASSES.
+This is a small project build for the registration process of the customers who are interested in joining the YOGA CLASSES.
 The users can simply register by submitting their basic details such as :-
 
 * Mobile Number
@@ -20,9 +20,10 @@ They can also select the suitable batch from the available four batches, namely 
 The payment of ₹500 -/ per month has to be done and customers can select their batch every month.
 
 ## Key Features
- * 📝 Checks whether the mobile number exists or not
+ * 📝 when user enters Checks whether the mobile number exists or not
  * 📒 Stores the information in DB for the entry
  * 🚫 Batch cannot be changed in the same month
+ * 
 
 ## Technologies Used
 This project was created using the following technologies.
