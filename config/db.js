@@ -2,9 +2,15 @@ const Sequelize = require('sequelize');
 const env = require('dotenv');
 env.config();
 
-const sequelize = new Sequelize(process.env.DB_URI);
+const sequelize = new Sequelize(process.env.DB_URI, {
+    pool: {
+        max: 5,
+        min: 0,
+        idle: 10000
+      }
+});
 
-(async () => {
+async () => {
     try {
         await sequelize.authenticate();
         console.log("Database Connected!");
@@ -12,7 +18,7 @@ const sequelize = new Sequelize(process.env.DB_URI);
         console.log("Couldn't Connect to server!");
         return "Server Error";
     }
-})();
+};
 
 
 
