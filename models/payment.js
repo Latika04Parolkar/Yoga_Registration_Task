@@ -1,6 +1,5 @@
 const Sequelize = require("sequelize");
 const sequelize = require("../config/db");
-const CustomerDetails = require("./customer");
 
 const Payment = sequelize.define("payment", {
     id : {
@@ -18,8 +17,6 @@ const Payment = sequelize.define("payment", {
         allowNull : false
     },
 })
-
-//Payment.belongsTo(CustomerDetails);
 
 sequelize.sync().then( (result) => {
     console.log("Table Payment Created!");

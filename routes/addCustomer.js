@@ -2,7 +2,7 @@ const express = require("express");
 const router = new express.Router();
 const validator = require("validator");
 const CustomerDetails = require("../models/customer");
-const Payment = require("../models/payment")
+const Payment = require("../models/payment");
 const app = express();
 app.use(router);
 
@@ -36,7 +36,7 @@ router.post("/addCustomer", async (req, res) => {
                 } else {
                     const currentMonth = new Date().getMonth();
                     const customer = await CustomerDetails.findOne({ where: { mobileNo: contact } })
-                    const payment = await Payment.findOne({ where: { customerDetailId: customer.id } });
+                    const payment = await Payment.findOne({ where: { customerId: customer.id } });
                     if ((currentMonth + 1) === payment.month) {
                         res.status(200).send({
                             code: 200,
@@ -94,7 +94,7 @@ router.post("/addInfo", async (req, res) => {
                         await Payment.create({
                             month: new Date().getMonth() + 1,
                             amount: 500,
-                            customerDetailId: customerId.id
+                            customerId: customerId.id
                         })
                         res.status(200).send({
                             code: 200,
@@ -118,7 +118,7 @@ router.post("/addInfo", async (req, res) => {
                         await Payment.create({
                             month: new Date().getMonth() + 1,
                             amount: 500,
-                            customerDetailId: customer.id
+                            customerId: customer.id
                         })
                         res.status(200).send({
                             code: 200,
