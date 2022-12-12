@@ -22,7 +22,7 @@ router.post("/addCustomer", async (req, res) => {
                     status: "Success",
                     message: "User Entry Done!",
                     id: customer.id,
-                    monthStatus: "Different"
+                    monthStatus: "First Time"
                 });
             } else {
                 const currentMonth = new Date().getMonth();
@@ -68,7 +68,7 @@ router.post("/addInfo", async (req, res) => {
             } else {
                 email = null;
             }
-            if (monthStatus === "Different") {
+            if (monthStatus === "FirstTime") {
                 const currentYear = new Date().getFullYear();
                 const birthYear = DOB.split('-')[2];
                 const checkAge = currentYear - birthYear;
@@ -94,7 +94,7 @@ router.post("/addInfo", async (req, res) => {
                         });
                     } else throw new Error("Payment Falied!")
                 } else throw new Error("This age people are not allowed!")
-            }else if(monthStatus === "Same"){
+            }else if(monthStatus === "Different"){
                 if (req.body.batch) {
                     const batch = req.body.batch;
                     await CustomerDetails.update({
