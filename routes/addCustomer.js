@@ -8,6 +8,7 @@ app.use(router);
 
 function completePayment() {
     return true;
+    // return false // if we want to mock payment failure
 }
 
 router.post("/addCustomer", async (req, res) => {
