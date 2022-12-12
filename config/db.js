@@ -4,9 +4,9 @@ env.config();
 
 const sequelize = new Sequelize(process.env.DB_URI, {
     pool: {
-        max: 5,
-        min: 0,
-        idle: 10000
+        max: process.env.POOL_MAX,
+        min: process.env.POOL_MIN,
+        idle: process.env.POOL_IDLE
       }
 });
 
