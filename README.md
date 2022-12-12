@@ -67,5 +67,6 @@ It stores the details of the amount paid, month in which the amount was paid, cu
 
 ## ER Diagram
 Understanding Database Design in a graphical manner. The following ER-Diagram explains the relations between the tables and attributes.
-![ER-Diagram_YogaTask](https://user-images.githubusercontent.com/60360732/207057631-98bec030-2dcb-4bad-89a9-a1035df130c1.jpg)
+
+![ER-Diagram_YogaTask](https://user-images.githubusercontent.com/60360732/207071583-51dd48e2-7fde-494c-8ae5-cef0f59926a5.jpg)
 
