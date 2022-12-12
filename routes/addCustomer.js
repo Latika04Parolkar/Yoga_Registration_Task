@@ -25,24 +25,34 @@ router.post("/addCustomer", async (req, res) => {
                     monthStatus: "First Time"
                 });
             } else {
-                const currentMonth = new Date().getMonth();
-                const customer = await CustomerDetails.findOne({ where: { mobileNo: contact } })
-                const payment = await Payment.findOne({ where: { customerDetailId: customer.id } });
-                if ((currentMonth + 1) === payment.month) {
+                if (customer.fullName === "") {
                     res.status(200).send({
                         code: 200,
                         status: "Success",
-                        message: "User's payment of this month is done!",
-                        currentBatch: customer.batch,
-                        monthStatus: "Same"
+                        message: "User Entry Done!",
+                        id: customer.id,
+                        monthStatus: "First Time"
                     });
                 } else {
-                    res.status(200).send({
-                        code: 200,
-                        status: "Success",
-                        message: "Batch selection and Payment has to be done!",
-                        monthStatus: "Different"
-                    });
+                    const currentMonth = new Date().getMonth();
+                    const customer = await CustomerDetails.findOne({ where: { mobileNo: contact } })
+                    const payment = await Payment.findOne({ where: { customerDetailId: customer.id } });
+                    if ((currentMonth + 1) === payment.month) {
+                        res.status(200).send({
+                            code: 200,
+                            status: "Success",
+                            message: "User's payment of this month is done!",
+                            currentBatch: customer.batch,
+                            monthStatus: "Same"
+                        });
+                    } else {
+                        res.status(200).send({
+                            code: 200,
+                            status: "Success",
+                            message: "Batch selection and Payment has to be done!",
+                            monthStatus: "Different"
+                        });
+                    }
                 }
             }
         } else throw new Error("Enter Correct Mobile Number!")
@@ -90,11 +100,11 @@ router.post("/addInfo", async (req, res) => {
                             code: 200,
                             status: "Success",
                             message: "Payment Done successfully!",
-                            batchSelected : customerId.batch
+                            batchSelected: customerId.batch
                         });
                     } else throw new Error("Payment Falied!")
                 } else throw new Error("This age people are not allowed!")
-            }else if(monthStatus === "Different"){
+            } else if (monthStatus === "Different") {
                 if (req.body.batch) {
                     const batch = req.body.batch;
                     await CustomerDetails.update({
