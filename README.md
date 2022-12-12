@@ -5,10 +5,10 @@ Built with the MERN stack (MySQL, Express, React and NodeJS).
 Basically this is a small project build for the registration process of the customers who are interested in joining the YOGA CLASSES.
 The users can simply register by submitting their basic details such as :-
 
-*Mobile Number
-*Full Name
-*Date of Birth
-*Email (optional)
+* Mobile Number
+* Full Name
+* Date of Birth
+* Email (optional)
 
 They can also select the suitable batch from the available four batches, namely :-
 
@@ -45,7 +45,7 @@ node index.js
 ## Databse Design
 This project consists of two Tables :-
 
-###(1) Customers
+### (1) Customers
 This table is designed to store the basic details of the user. It consists of the following attributes :-
 Id ( primary key )
 fullName,
@@ -55,7 +55,7 @@ email,
 batch and
 default timestamps
 
-###(2) Payment
+### (2) Payment
 It stores the details of the amount paid, month in which the amount was paid, customerDetailId ( foriegn key ) , id (primary key) and the default timestapms.
 
 ## ER Diagram
