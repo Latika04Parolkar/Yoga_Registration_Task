@@ -73,3 +73,12 @@ Understanding Database Design in a graphical manner. The following ER-Diagram ex
 
 ![ER-Diagram_YogaTask](https://user-images.githubusercontent.com/60360732/207071583-51dd48e2-7fde-494c-8ae5-cef0f59926a5.jpg)
 
+## SQL Tables
+
+### (1) customerDetails
+![Table_1-CustomerDetails](https://user-images.githubusercontent.com/60360732/207386921-a8c8d7ca-cf75-4a11-8e39-6aaca1425a95.jpg)
+
+### (2) payments
+![Table_2-Payments](https://user-images.githubusercontent.com/60360732/207387039-b912eadd-41c9-492e-b2ac-4088c19a5672.jpg)
+
+
